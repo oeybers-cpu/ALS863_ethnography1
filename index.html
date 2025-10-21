@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethnographic Approaches in Sociocultural Linguistics - ALS 863</title>
+    <style>
+        :root {
+            --dark-orange: #cc5500;
+            --dark-blue: #003366;
+            --light-gray: #f5f5f5;
+            --medium-gray: #e0e0e0;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: white;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .container {
+            display: flex;
+            min-height: 100vh;
+        }
+        
+        /* Sidebar Styles */
+        .sidebar {
+            width: 250px;
+            background-color: var(--light-gray);
+            padding: 20px;
+            border-right: 1px solid var(--medium-gray);
+        }
+        
+        .sidebar h2 {
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--dark-orange);
+        }
+        
+        .tabs {
+            list-style-type: none;
+        }
+        
+        .tab {
+            padding: 12px 15px;
+            margin-bottom: 8px;
+            background-color: white;
+            border-left: 4px solid var(--dark-blue);
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 4px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .tab:hover {
+            background-color: var(--medium-gray);
+            border-left-color: var(--dark-orange);
+        }
+        
+        .tab.active {
+            background-color: var(--dark-blue);
+            color: white;
+            border-left-color: var(--dark-orange);
+        }
+        
+        /* Main Content Styles */
+        .main-content {
+            flex: 1;
+            padding: 30px;
+            overflow-y: auto;
+        }
+        
+        .section {
+            display: none;
+            margin-bottom: 30px;
+        }
+        
+        .section.active {
+            display: block;
+        }
+        
+        .section h1 {
+            color: var(--dark-blue);
+            margin-bottom: 20px;
+            font-size: 2rem;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--dark-orange);
+        }
+        
+        .section h2 {
+            color: var(--dark-blue);
+            margin: 20px 0 15px;
+            font-size: 1.5rem;
+        }
+        
+        .section p {
+            margin-bottom: 15px;
+        }
+        
+        .example-box {
+            background-color: var(--light-gray);
+            border-left: 4px solid var(--dark-orange);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        
+        .example-box h3 {
+            color: var(--dark-blue);
+            margin-bottom: 10px;
+        }
+        
+        .notes-section {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: var(--light-gray);
+            border-radius: 8px;
+            border: 1px solid var(--medium-gray);
+        }
+        
+        .notes-section h3 {
+            color: var(--dark-blue);
+            margin-bottom: 15px;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 12px;
+            border: 1px solid var(--medium-gray);
+            border-radius: 4px;
+            resize: vertical;
+            margin-bottom: 15px;
+            font-size: 1rem;
+        }
+        
+        button {
+            background-color: var(--dark-blue);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 1rem;
+            transition: background-color 0.3s;
+        }
+        
+        button:hover {
+            background-color: var(--dark-orange);
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px solid var(--medium-gray);
+            color: #666;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar with Tabs -->
+        <div class="sidebar">
+            <h2>Ethnographic Approaches</h2>
+            <ul class="tabs">
+                <li class="tab active" data-tab="what-is">What is Ethnography?</li>
+                <li class="tab" data-tab="forms">Forms of Ethnography</li>
+                <li class="tab" data-tab="characteristics">Characteristics</li>
+                <li class="tab" data-tab="steps">Research Steps</li>
+                <li class="tab" data-tab="methods">Methods & Data</li>
+            </ul>
+        </div>
+        
+        <!-- Main Content Area -->
+        <div class="main-content">
+            <!-- What is Ethnography Section -->
+            <div class="section active" id="what-is">
+                <h1>What is Ethnography?</h1>
+                <p>Ethnography is a major qualitative research approach that originates from anthropology. It involves the discovery and description of culture within a group or society. In sociocultural linguistics, ethnography helps researchers understand how language practices are embedded in cultural contexts.</p>
+                
+                <p>The central theme of ethnography is culture, which refers to the system of norms, standards, and practices that a society develops over generations. Ethnographic research requires researchers to immerse themselves in the target population's real-life situations to obtain useful cultural information.</p>
+                
+                <div class="example-box">
+                    <h3>Practical Example in Sociocultural Linguistics</h3>
+                    <p>A researcher studying language socialization in immigrant communities might spend months observing family interactions, community events, and educational settings to understand how children acquire both heritage and host country languages.</p>
+                </div>
+                
+                <div class="notes-section">
+                    <h3>Your Notes & Questions</h3>
+                    <textarea id="what-is-notes" placeholder="Type your notes or questions about ethnography here..."></textarea>
+                    <button onclick="downloadNotes('what-is-notes', 'Ethnography-Notes-What-is-Ethnography.pdf')">Download Notes as PDF</button>
+                </div>
+            </div>
+            
+            <!-- Forms of Ethnography Section -->
+            <div class="section" id="forms">
+                <h1>Forms of Ethnography</h1>
+                <p>Ethnography research takes several forms, each with distinct focuses and methodologies. The two most common forms are realist ethnography and critical ethnography.</p>
+                
+                <h2>Realist Ethnography</h2>
+                <p>Also known as traditional ethnography, this approach is used by cultural anthropologists. It focuses on objective observation of individuals within groups, presenting findings in a detached, third-person narrative.</p>
+                
+                <h2>Critical Ethnography</h2>
+                <p>This approach focuses on marginalized groups in society. Critical ethnographers take an oppositional stance to disadvantage in society, often working with communities like scheduled castes and tribes to understand their experiences and perspectives.</p>
+                
+                <div class="example-box">
+                    <h3>Practical Example in Sociocultural Linguistics</h3>
+                    <p>A critical ethnographer might study language discrimination in educational settings, examining how dialect differences affect teacher expectations and student outcomes in schools serving marginalized communities.</p>
+                </div>
+                
+                <div class="notes-section">
+                    <h3>Your Notes & Questions</h3>
+                    <textarea id="forms-notes" placeholder="Type your notes or questions about forms of ethnography here..."></textarea>
+                    <button onclick="downloadNotes('forms-notes', 'Ethnography-Notes-Forms-of-Ethnography.pdf')">Download Notes as PDF</button>
+                </div>
+            </div>
+            
+            <!-- Characteristics Section -->
+            <div class="section" id="characteristics">
+                <h1>Characteristics of Ethnography</h1>
+                <p>Ethnographic research has several distinctive characteristics that set it apart from other research approaches:</p>
+                
+                <h2>Long-term Immersion</h2>
+                <p>Ethnographers typically spend extended periods (months to years) with the group they're studying to develop deep understanding.</p>
+                
+                <h2>Emic and Etic Perspectives</h2>
+                <p>Ethnography balances insider (emic) perspectives—how culture members perceive their own culture—with outsider (etic) perspectives—how external observers analyze cultural behaviors.</p>
+                
+                <h2>Participant Observation</h2>
+                <p>This is the primary data collection technique, where researchers both observe and participate in community activities.</p>
+                
+                <h2>Inductive Hypothesis Development</h2>
+                <p>Hypotheses emerge from qualitative data during research rather than being formulated beforehand.</p>
+                
+                <div class="example-box">
+                    <h3>Practical Example in Sociocultural Linguistics</h3>
+                    <p>A researcher studying language shift in a bilingual community would use participant observation to understand both public language use (etic perspective) and community members' attitudes toward language preservation (emic perspective).</p>
+                </div>
+                
+                <div class="notes-section">
+                    <h3>Your Notes & Questions</h3>
+                    <textarea id="characteristics-notes" placeholder="Type your notes or questions about ethnography characteristics here..."></textarea>
+                    <button onclick="downloadNotes('characteristics-notes', 'Ethnography-Notes-Characteristics.pdf')">Download Notes as PDF</button>
+                </div>
+            </div>
+            
+            <!-- Research Steps Section -->
+            <div class="section" id="steps">
+                <h1>Steps in Ethnographic Research</h1>
+                <p>Ethnographic research follows a systematic process:</p>
+                
+                <h2>1. Problem Definition</h2>
+                <p>Review literature and define a research problem, such as studying language practices in a specific community.</p>
+                
+                <h2>2. Field Selection</h2>
+                <p>Choose a specific community or group for study and narrow down to a research focus.</p>
+                
+                <h2>3. Hypothesis Formulation</h2>
+                <p>Develop inductive hypotheses based on research objectives that may be modified during fieldwork.</p>
+                
+                <h2>4. Population and Sampling</h2>
+                <p>Define the study population and select purposeful samples that are information-rich.</p>
+                
+                <h2>5. Data Collection</h2>
+                <p>Use participant observation, interviews, and other methods to gather cultural data.</p>
+                
+                <h2>6. Data Analysis and Interpretation</h2>
+                <p>Analyze data to identify cultural patterns and meanings.</p>
+                
+                <div class="example-box">
+                    <h3>Practical Example in Sociocultural Linguistics</h3>
+                    <p>Researching code-switching in multilingual workplaces might involve: (1) defining the research problem, (2) selecting specific companies, (3) forming initial hypotheses, (4) identifying key informants, (5) observing meetings and interactions, and (6) analyzing when and why employees switch between languages.</p>
+                </div>
+                
+                <div class="notes-section">
+                    <h3>Your Notes & Questions</h3>
+                    <textarea id="steps-notes" placeholder="Type your notes or questions about research steps here..."></textarea>
+                    <button onclick="downloadNotes('steps-notes', 'Ethnography-Notes-Research-Steps.pdf')">Download Notes as PDF</button>
+                </div>
+            </div>
+            
+            <!-- Methods & Data Section -->
+            <div class="section" id="methods">
+                <h1>Methods & Data in Ethnography</h1>
+                <p>Ethnographic research employs multiple methods to gather rich, contextual data:</p>
+                
+                <h2>Primary Data Collection</h2>
+                <p>Participant observation is the cornerstone, supplemented by interviews, descriptive surveys, and analysis of cultural artifacts.</p>
+                
+                <h2>Types of Data</h2>
+                <p>Ethnographers collect detailed descriptions, field notes, audio/video recordings, and symbolic materials that provide insights into cultural practices.</p>
+                
+                <h2>Data Analysis Approach</h2>
+                <p>Analysis focuses on holistic description of cultural characteristics, examining language, social relations, beliefs, and practices within their natural contexts.</p>
+                
+                <div class="example-box">
+                    <h3>Practical Example in Sociocultural Linguistics</h3>
+                    <p>Studying language ideologies in media consumption might involve: recording family TV viewing sessions, conducting interviews about language preferences, collecting media diaries, and analyzing how different generations discuss language "correctness" in relation to media representations.</p>
+                </div>
+                
+                <div class="notes-section">
+                    <h3>Your Notes & Questions</h3>
+                    <textarea id="methods-notes" placeholder="Type your notes or questions about methods and data here..."></textarea>
+                    <button onclick="downloadNotes('methods-notes', 'Ethnography-Notes-Methods-and-Data.pdf')">Download Notes as PDF</button>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>ALS 863 - Ethnographic Approaches in Sociocultural Linguistics | Based on "Ethnography Research: An Overview" by Sharma & Sarkar (2019)</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tab switching functionality
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active class from all tabs and sections
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+                
+                // Add active class to clicked tab
+                tab.classList.add('active');
+                
+                // Show corresponding section
+                const tabId = tab.getAttribute('data-tab');
+                document.getElementById(tabId).classList.add('active');
+            });
+        });
+        
+        // Function to download notes as PDF
+        function downloadNotes(textareaId, filename) {
+            const notesText = document.getElementById(textareaId).value;
+            
+            if (!notesText.trim()) {
+                alert('Please enter some notes before downloading.');
+                return;
+            }
+            
+            // Create a new window for printing
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <html>
+                    <head>
+                        <title>${filename}</title>
+                        <style>
+                            body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+                            h1 { color: #003366; border-bottom: 2px solid #cc5500; padding-bottom: 10px; }
+                            .notes-content { white-space: pre-wrap; margin-top: 20px; }
+                        </style>
+                    </head>
+                    <body>
+                        <h1>${filename.replace('.pdf', '')}</h1>
+                        <div class="notes-content">${notesText}</div>
+                    </body>
+                </html>
+            `);
+            
+            printWindow.document.close();
+            printWindow.print();
+        }
+    </script>
+</body>
+</html>
+
