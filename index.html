@@ -1,3 +1,81 @@
+
+<li class="tab" data-tab="references">References</li>
+
+<!-- Add this to your main content sections -->
+<div class="section" id="references">
+    <h1>References</h1>
+    
+    <div class="references-list">
+        <div class="reference-item">
+            <p>Smith, D.E., 2016. Institutional Ethnography Research in Global South Settings. <em>Qualitative Research Journal</em>, [online] Available at: <a href="https://journals.sagepub.com/doi/10.1177/1609406916637088" target="_blank">https://journals.sagepub.com/doi/10.1177/1609406916637088</a> [Accessed 21 October 2025].</p>
+        </div>
+        
+        <div class="reference-item">
+            <p>Hine, C., 2024. Ethnography. <em>Anthropology Encyclopedia</em>, [online] Available at: <a href="https://www.anthroencyclopedia.com/entry/ethnography" target="_blank">https://www.anthroencyclopedia.com/entry/ethnography</a> [Accessed 21 October 2025].</p>
+        </div>
+        
+        <div class="reference-item">
+            <p>Jones, L., 2025. Conducting Ethnographic Fieldwork in the Global South. <em>Allegra Laboratory</em>, [online] Available at: <a href="https://allegralaboratory.net/introduction-conducting-ethnographic-fieldwork-in-the-global-south/" target="_blank">https://allegralaboratory.net/introduction-conducting-ethnographic-fieldwork-in-the-global-south/</a> [Accessed 21 October 2025].</p>
+        </div>
+        
+        <div class="reference-item">
+            <p>ATLAS.ti, 2025. Ethnographic Research | Definition, Methods & Data. <em>ATLAS.ti Guides</em>, [online] Available at: <a href="https://atlasti.com/guides/qualitative-research-guide-part-1/ethnographic-research" target="_blank">https://atlasti.com/guides/qualitative-research-guide-part-1/ethnographic-research</a> [Accessed 21 October 2025].</p>
+        </div>
+        
+        <div class="reference-item">
+            <p>Moyo, D., 2022. Decolonising research methodologies in the Global South: Experiences of an African social scientist. <em>African Journal of Social Work</em>, [online] Available at: <a href="https://ajsw.africasocialwork.net/wp-content/uploads/2022/11/7-Decolonising-research-methodologies-in-the-Global-South-Experiences-of-an-African-social-scientist.pdf" target="_blank">https://ajsw.africasocialwork.net/wp-content/uploads/2022/11/7-Decolonising-research-methodologies-in-the-Global-South-Experiences-of-an-African-social-scientist.pdf</a> [Accessed 21 October 2025].</p>
+        </div>
+    </div>
+    
+    <div class="notes-section">
+        <h3>Additional Resources & Notes</h3>
+        <textarea id="references-notes" placeholder="Add any additional references or notes here..."></textarea>
+        <button onclick="downloadNotes('references-notes', 'Ethnography-References-and-Notes.pdf')">Download Notes as PDF</button>
+    </div>
+</div>
+```
+
+And here's the CSS to style the references section:
+
+```css
+.references-list {
+    margin: 25px 0;
+}
+
+.reference-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background-color: var(--light-gray);
+    border-radius: 6px;
+    border-left: 3px solid var(--dark-blue);
+}
+
+.reference-item p {
+    margin: 0;
+    line-height: 1.5;
+}
+
+.reference-item a {
+    color: var(--dark-orange);
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.reference-item a:hover {
+    text-decoration: underline;
+}
+
+.reference-item em {
+    font-style: italic;
+    color: var(--dark-blue);
+}
+```
+
+## Complete Updated HTML File
+
+Here's the complete HTML file with the references section added:
+
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -140,6 +218,38 @@
             margin-bottom: 15px;
         }
         
+        .references-list {
+            margin: 25px 0;
+        }
+        
+        .reference-item {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: var(--light-gray);
+            border-radius: 6px;
+            border-left: 3px solid var(--dark-blue);
+        }
+        
+        .reference-item p {
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        .reference-item a {
+            color: var(--dark-orange);
+            text-decoration: none;
+            word-break: break-all;
+        }
+        
+        .reference-item a:hover {
+            text-decoration: underline;
+        }
+        
+        .reference-item em {
+            font-style: italic;
+            color: var(--dark-blue);
+        }
+        
         .notes-section {
             margin-top: 30px;
             padding: 20px;
@@ -209,6 +319,7 @@
                 <li class="tab" data-tab="characteristics">Characteristics</li>
                 <li class="tab" data-tab="steps">Research Steps</li>
                 <li class="tab" data-tab="methods">Methods & Data</li>
+                <li class="tab" data-tab="references">References</li>
             </ul>
         </div>
         
@@ -393,6 +504,39 @@
                         <textarea id="methods-notes" placeholder="Reflect on ethnographic methods for your MA study..."></textarea>
                     </div>
                     <button onclick="downloadNotes('methods-notes', 'Ethnography-Notes-Methods-and-Data.pdf')">Download Notes as PDF</button>
+                </div>
+            </div>
+            
+            <!-- References Section -->
+            <div class="section" id="references">
+                <h1>References</h1>
+                
+                <div class="references-list">
+                    <div class="reference-item">
+                        <p>Smith, D.E., 2016. Institutional Ethnography Research in Global South Settings. <em>Qualitative Research Journal</em>, [online] Available at: <a href="https://journals.sagepub.com/doi/10.1177/1609406916637088" target="_blank">https://journals.sagepub.com/doi/10.1177/1609406916637088</a> [Accessed 21 October 2025].</p>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <p>Hine, C., 2024. Ethnography. <em>Anthropology Encyclopedia</em>, [online] Available at: <a href="https://www.anthroencyclopedia.com/entry/ethnography" target="_blank">https://www.anthroencyclopedia.com/entry/ethnography</a> [Accessed 21 October 2025].</p>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <p>Jones, L., 2025. Conducting Ethnographic Fieldwork in the Global South. <em>Allegra Laboratory</em>, [online] Available at: <a href="https://allegralaboratory.net/introduction-conducting-ethnographic-fieldwork-in-the-global-south/" target="_blank">https://allegralaboratory.net/introduction-conducting-ethnographic-fieldwork-in-the-global-south/</a> [Accessed 21 October 2025].</p>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <p>ATLAS.ti, 2025. Ethnographic Research | Definition, Methods & Data. <em>ATLAS.ti Guides</em>, [online] Available at: <a href="https://atlasti.com/guides/qualitative-research-guide-part-1/ethnographic-research" target="_blank">https://atlasti.com/guides/qualitative-research-guide-part-1/ethnographic-research</a> [Accessed 21 October 2025].</p>
+                    </div>
+                    
+                    <div class="reference-item">
+                        <p>Moyo, D., 2022. Decolonising research methodologies in the Global South: Experiences of an African social scientist. <em>African Journal of Social Work</em>, [online] Available at: <a href="https://ajsw.africasocialwork.net/wp-content/uploads/2022/11/7-Decolonising-research-methodologies-in-the-Global-South-Experiences-of-an-African-social-scientist.pdf" target="_blank">https://ajsw.africasocialwork.net/wp-content/uploads/2022/11/7-Decolonising-research-methodologies-in-the-Global-South-Experiences-of-an-African-social-scientist.pdf</a> [Accessed 21 October 2025].</p>
+                    </div>
+                </div>
+                
+                <div class="notes-section">
+                    <h3>Additional Resources & Notes</h3>
+                    <textarea id="references-notes" placeholder="Add any additional references or notes here..."></textarea>
+                    <button onclick="downloadNotes('references-notes', 'Ethnography-References-and-Notes.pdf')">Download Notes as PDF</button>
                 </div>
             </div>
             
