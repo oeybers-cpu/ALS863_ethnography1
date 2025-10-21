@@ -119,6 +119,27 @@
             margin-bottom: 10px;
         }
         
+        .news-article {
+            background-color: #fff;
+            border: 1px solid var(--medium-gray);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .news-article h3 {
+            color: var(--dark-blue);
+            font-size: 1.6rem;
+            margin-bottom: 10px;
+        }
+        
+        .news-article .date {
+            color: #666;
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+        
         .notes-section {
             margin-top: 30px;
             padding: 20px;
@@ -132,9 +153,18 @@
             margin-bottom: 15px;
         }
         
+        .question-group {
+            margin-bottom: 20px;
+        }
+        
+        .question-group h4 {
+            color: var(--dark-blue);
+            margin-bottom: 8px;
+        }
+        
         textarea {
             width: 100%;
-            height: 150px;
+            height: 120px;
             padding: 12px;
             border: 1px solid var(--medium-gray);
             border-radius: 4px;
@@ -198,7 +228,10 @@
                 
                 <div class="notes-section">
                     <h3>Your Notes & Questions</h3>
-                    <textarea id="what-is-notes" placeholder="Type your notes or questions about ethnography here..."></textarea>
+                    <div class="question-group">
+                        <h4>How would you describe your ethnographic working or research context? What are its features?</h4>
+                        <textarea id="what-is-notes" placeholder="Describe your research context and its features..."></textarea>
+                    </div>
                     <button onclick="downloadNotes('what-is-notes', 'Ethnography-Notes-What-is-Ethnography.pdf')">Download Notes as PDF</button>
                 </div>
             </div>
@@ -221,72 +254,102 @@
                 
                 <div class="notes-section">
                     <h3>Your Notes & Questions</h3>
-                    <textarea id="forms-notes" placeholder="Type your notes or questions about forms of ethnography here..."></textarea>
-                    <button onclick="downloadNotes('forms-notes', 'Ethnography-Notes-Forms-of-Ethnography.pdf')">Download Notes as PDF</button>
+                    <div class="question-group">
+                        <h4>What is my view of objective versus subjective views of observation?</h4>
+                        <textarea id="forms-notes1" placeholder="Reflect on your perspective on observation..."></textarea>
+                    </div>
+                    <div class="question-group">
+                        <h4>Why is ethnography relevant to the focus area of my research?</h4>
+                        <textarea id="forms-notes2" placeholder="Explain why ethnography fits your research focus..."></textarea>
+                    </div>
+                    <button onclick="downloadFormsNotes()">Download Notes as PDF</button>
                 </div>
             </div>
             
             <!-- Characteristics Section -->
             <div class="section" id="characteristics">
                 <h1>Characteristics of Ethnography</h1>
-                <p>Ethnographic research has several distinctive characteristics that set it apart from other research approaches:</p>
-                
-                <h2>Long-term Immersion</h2>
-                <p>Ethnographers typically spend extended periods (months to years) with the group they're studying to develop deep understanding.</p>
-                
-                <h2>Emic and Etic Perspectives</h2>
-                <p>Ethnography balances insider (emic) perspectives—how culture members perceive their own culture—with outsider (etic) perspectives—how external observers analyze cultural behaviors.</p>
-                
-                <h2>Participant Observation</h2>
-                <p>This is the primary data collection technique, where researchers both observe and participate in community activities.</p>
-                
-                <h2>Inductive Hypothesis Development</h2>
-                <p>Hypotheses emerge from qualitative data during research rather than being formulated beforehand.</p>
-                
-                <div class="example-box">
-                    <h3>Practical Example in Sociocultural Linguistics</h3>
-                    <p>A researcher studying language shift in a bilingual community would use participant observation to understand both public language use (etic perspective) and community members' attitudes toward language preservation (emic perspective).</p>
-                </div>
+                <p>Ethnographic research has several distinctive characteristics that set it apart from other research approaches. Consider how these apply to your own teaching or research context:</p>
                 
                 <div class="notes-section">
-                    <h3>Your Notes & Questions</h3>
-                    <textarea id="characteristics-notes" placeholder="Type your notes or questions about ethnography characteristics here..."></textarea>
-                    <button onclick="downloadNotes('characteristics-notes', 'Ethnography-Notes-Characteristics.pdf')">Download Notes as PDF</button>
+                    <h3>Questions About Your Research Context</h3>
+                    
+                    <div class="question-group">
+                        <h4>Long-term Immersion: How can I establish extended engagement with my research participants to develop deep understanding?</h4>
+                        <textarea id="immersion-notes" placeholder="Describe your approach to long-term immersion..."></textarea>
+                    </div>
+                    
+                    <div class="question-group">
+                        <h4>Emic and Etic Perspectives: How will I balance insider perspectives (participants' views) with outsider perspectives (my analytical framework)?</h4>
+                        <textarea id="perspectives-notes" placeholder="Explain your approach to emic and etic perspectives..."></textarea>
+                    </div>
+                    
+                    <div class="question-group">
+                        <h4>Participant Observation: In what ways can I both observe and participate in my research context?</h4>
+                        <textarea id="observation-notes" placeholder="Describe your participant observation approach..."></textarea>
+                    </div>
+                    
+                    <div class="question-group">
+                        <h4>Inductive Hypothesis Development: How will I allow hypotheses to emerge from my data rather than imposing pre-conceived ideas?</h4>
+                        <textarea id="hypothesis-notes" placeholder="Explain your approach to hypothesis development..."></textarea>
+                    </div>
+                    
+                    <button onclick="downloadCharacteristicsNotes()">Download Notes as PDF</button>
                 </div>
             </div>
             
             <!-- Research Steps Section -->
             <div class="section" id="steps">
                 <h1>Steps in Ethnographic Research</h1>
-                <p>Ethnographic research follows a systematic process:</p>
+                <p>Ethnographic research follows a systematic process. Read the following fictional news article and consider how you would approach each research step:</p>
                 
-                <h2>1. Problem Definition</h2>
-                <p>Review literature and define a research problem, such as studying language practices in a specific community.</p>
-                
-                <h2>2. Field Selection</h2>
-                <p>Choose a specific community or group for study and narrow down to a research focus.</p>
-                
-                <h2>3. Hypothesis Formulation</h2>
-                <p>Develop inductive hypotheses based on research objectives that may be modified during fieldwork.</p>
-                
-                <h2>4. Population and Sampling</h2>
-                <p>Define the study population and select purposeful samples that are information-rich.</p>
-                
-                <h2>5. Data Collection</h2>
-                <p>Use participant observation, interviews, and other methods to gather cultural data.</p>
-                
-                <h2>6. Data Analysis and Interpretation</h2>
-                <p>Analyze data to identify cultural patterns and meanings.</p>
-                
-                <div class="example-box">
-                    <h3>Practical Example in Sociocultural Linguistics</h3>
-                    <p>Researching code-switching in multilingual workplaces might involve: (1) defining the research problem, (2) selecting specific companies, (3) forming initial hypotheses, (4) identifying key informants, (5) observing meetings and interactions, and (6) analyzing when and why employees switch between languages.</p>
+                <div class="news-article">
+                    <h3>Women-Led Farming Initiative Transforms Kinshasa Community</h3>
+                    <p class="date">KINSHASA, DRC - October 15, 2023</p>
+                    <p>In the bustling outskirts of Kinshasa, a remarkable transformation is taking place in the Ndjili district. What began as a small vegetable garden cultivated by five women has blossomed into a community-wide farming initiative that now feeds over 200 families and provides income for dozens of local women.</p>
+                    
+                    <p>The project, called "Mama Shujaa" (Hero Women), was started by Mama Aisha Bintu, a 45-year-old widow and mother of four. "After my husband passed, I struggled to feed my children," Bintu recalls. "I noticed vacant land in our neighborhood and remembered the farming techniques my grandmother taught me. I started with just tomatoes and onions."</p>
+                    
+                    <p>Word of Bintu's successful small garden spread through the tight-knit community. Soon, other women facing similar hardships joined her. They organized themselves into work groups, sharing tools, seeds, and childcare responsibilities. The initiative now manages seven plots totaling nearly five acres, growing everything from traditional leafy greens to carrots, cabbage, and potatoes.</p>
+                    
+                    <p>The women have developed a unique leadership structure based on rotating responsibilities and consensus decision-making. They meet every Sunday after church to discuss challenges, share successes, and make collective decisions about planting, harvesting, and sales.</p>
+                    
+                    <p>"What makes this project special isn't just the food it produces, but the community it has built," observes Father Joseph Mbaya, a local priest who has supported the initiative. "These women have created their own economy, their own support system. They've become leaders in a community where women's voices weren't always heard."</p>
+                    
+                    <p>The success has attracted attention from development organizations, but the women remain determined to maintain control of their project. "We know what works for our community," says Bintu. "Outside help is welcome, but we must lead."</p>
+                    
+                    <p>As the sun sets over the vibrant green plots, the women gather to share stories and plan for the next planting season—their laughter and determination a testament to what community-led change can accomplish.</p>
                 </div>
                 
                 <div class="notes-section">
-                    <h3>Your Notes & Questions</h3>
-                    <textarea id="steps-notes" placeholder="Type your notes or questions about research steps here..."></textarea>
-                    <button onclick="downloadNotes('steps-notes', 'Ethnography-Notes-Research-Steps.pdf')">Download Notes as PDF</button>
+                    <h3>Ethnographic Analysis Questions</h3>
+                    
+                    <div class="question-group">
+                        <h4>1. Problem Definition: What specific research problem about this community might an ethnographer investigate?</h4>
+                        <textarea id="problem-notes" placeholder="Define a research problem based on the article..."></textarea>
+                    </div>
+                    
+                    <div class="question-group">
+                        <h4>2. Field Selection: How would you narrow down the research focus within this community?</h4>
+                        <textarea id="field-notes" placeholder="Describe how you would select and narrow your field..."></textarea>
+                    </div>
+                    
+                    <div class="question-group">
+                        <h4>3. Hypothesis Formulation: What initial inductive hypotheses might emerge about this community's social dynamics?</h4>
+                        <textarea id="hypothesis2-notes" placeholder="Formulate initial hypotheses..."></textarea>
+                    </div>
+                    
+                    <div class="question-group">
+                        <h4>4. Population and Sampling: Who would be your target population and how would you select participants?</h4>
+                        <textarea id="population-notes" placeholder="Describe your sampling approach..."></textarea>
+                    </div>
+                    
+                    <div class="question-group">
+                        <h4>5. Data Collection: What specific ethnographic methods would you use to gather cultural data in this context?</h4>
+                        <textarea id="collection-notes" placeholder="Explain your data collection methods..."></textarea>
+                    </div>
+                    
+                    <button onclick="downloadStepsNotes()">Download Notes as PDF</button>
                 </div>
             </div>
             
@@ -295,8 +358,22 @@
                 <h1>Methods & Data in Ethnography</h1>
                 <p>Ethnographic research employs multiple methods to gather rich, contextual data:</p>
                 
-                <h2>Primary Data Collection</h2>
-                <p>Participant observation is the cornerstone, supplemented by interviews, descriptive surveys, and analysis of cultural artifacts.</p>
+                <h2>Primary Data Collection Methods</h2>
+                <p><strong>Participant Observation:</strong> The cornerstone method where researchers both observe and participate in community activities over extended periods.</p>
+                
+                <p><strong>Interviews:</strong> Ranging from structured to unstructured formats, including:
+                <ul>
+                    <li><strong>Informal conversational interviews</strong> that occur naturally during fieldwork</li>
+                    <li><strong>Semi-structured interviews</strong> with guided questions but flexible format</li>
+                    <li><strong>Life history interviews</strong> exploring personal narratives and experiences</li>
+                </ul>
+                </p>
+                
+                <p><strong>Focus Groups:</strong> Facilitated group discussions that reveal collective norms, shared understandings, and social dynamics.</p>
+                
+                <p><strong>Document Analysis:</strong> Examination of existing materials like personal diaries, official records, photographs, or community artifacts.</p>
+                
+                <p><strong>Visual Methods:</strong> Using photography, video, or mapping to document spatial relationships and visual aspects of culture.</p>
                 
                 <h2>Types of Data</h2>
                 <p>Ethnographers collect detailed descriptions, field notes, audio/video recordings, and symbolic materials that provide insights into cultural practices.</p>
@@ -306,12 +383,15 @@
                 
                 <div class="example-box">
                     <h3>Practical Example in Sociocultural Linguistics</h3>
-                    <p>Studying language ideologies in media consumption might involve: recording family TV viewing sessions, conducting interviews about language preferences, collecting media diaries, and analyzing how different generations discuss language "correctness" in relation to media representations.</p>
+                    <p>Studying language ideologies in media consumption might involve: recording family TV viewing sessions, conducting interviews about language preferences, running focus groups to discuss media representations, collecting media diaries, and analyzing how different generations discuss language "correctness" in relation to media content.</p>
                 </div>
                 
                 <div class="notes-section">
-                    <h3>Your Notes & Questions</h3>
-                    <textarea id="methods-notes" placeholder="Type your notes or questions about methods and data here..."></textarea>
+                    <h3>Reflection on Your MA Study</h3>
+                    <div class="question-group">
+                        <h4>Reflect on the ethnographic features or methods in your own MA study. Which methods would be most appropriate and why?</h4>
+                        <textarea id="methods-notes" placeholder="Reflect on ethnographic methods for your MA study..."></textarea>
+                    </div>
                     <button onclick="downloadNotes('methods-notes', 'Ethnography-Notes-Methods-and-Data.pdf')">Download Notes as PDF</button>
                 </div>
             </div>
@@ -339,7 +419,133 @@
             });
         });
         
-        // Function to download notes as PDF
+        // Function to download notes as PDF for Forms section
+        function downloadFormsNotes() {
+            const notes1 = document.getElementById('forms-notes1').value;
+            const notes2 = document.getElementById('forms-notes2').value;
+            
+            if (!notes1.trim() && !notes2.trim()) {
+                alert('Please enter some notes before downloading.');
+                return;
+            }
+            
+            // Create a new window for printing
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <html>
+                    <head>
+                        <title>Ethnography-Notes-Forms-of-Ethnography.pdf</title>
+                        <style>
+                            body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+                            h1 { color: #003366; border-bottom: 2px solid #cc5500; padding-bottom: 10px; }
+                            .question { margin-top: 20px; font-weight: bold; }
+                            .answer { white-space: pre-wrap; margin-bottom: 25px; padding-left: 20px; }
+                        </style>
+                    </head>
+                    <body>
+                        <h1>Ethnography Notes - Forms of Ethnography</h1>
+                        <div class="question">What is my view of objective versus subjective views of observation?</div>
+                        <div class="answer">${notes1}</div>
+                        <div class="question">Why is ethnography relevant to the focus area of my research?</div>
+                        <div class="answer">${notes2}</div>
+                    </body>
+                </html>
+            `);
+            
+            printWindow.document.close();
+            printWindow.print();
+        }
+        
+        // Function to download notes as PDF for Characteristics section
+        function downloadCharacteristicsNotes() {
+            const immersion = document.getElementById('immersion-notes').value;
+            const perspectives = document.getElementById('perspectives-notes').value;
+            const observation = document.getElementById('observation-notes').value;
+            const hypothesis = document.getElementById('hypothesis-notes').value;
+            
+            if (!immersion.trim() && !perspectives.trim() && !observation.trim() && !hypothesis.trim()) {
+                alert('Please enter some notes before downloading.');
+                return;
+            }
+            
+            // Create a new window for printing
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <html>
+                    <head>
+                        <title>Ethnography-Notes-Characteristics.pdf</title>
+                        <style>
+                            body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+                            h1 { color: #003366; border-bottom: 2px solid #cc5500; padding-bottom: 10px; }
+                            .question { margin-top: 20px; font-weight: bold; }
+                            .answer { white-space: pre-wrap; margin-bottom: 25px; padding-left: 20px; }
+                        </style>
+                    </head>
+                    <body>
+                        <h1>Ethnography Notes - Characteristics</h1>
+                        <div class="question">Long-term Immersion: How can I establish extended engagement with my research participants to develop deep understanding?</div>
+                        <div class="answer">${immersion}</div>
+                        <div class="question">Emic and Etic Perspectives: How will I balance insider perspectives (participants' views) with outsider perspectives (my analytical framework)?</div>
+                        <div class="answer">${perspectives}</div>
+                        <div class="question">Participant Observation: In what ways can I both observe and participate in my research context?</div>
+                        <div class="answer">${observation}</div>
+                        <div class="question">Inductive Hypothesis Development: How will I allow hypotheses to emerge from my data rather than imposing pre-conceived ideas?</div>
+                        <div class="answer">${hypothesis}</div>
+                    </body>
+                </html>
+            `);
+            
+            printWindow.document.close();
+            printWindow.print();
+        }
+        
+        // Function to download notes as PDF for Steps section
+        function downloadStepsNotes() {
+            const problem = document.getElementById('problem-notes').value;
+            const field = document.getElementById('field-notes').value;
+            const hypothesis = document.getElementById('hypothesis2-notes').value;
+            const population = document.getElementById('population-notes').value;
+            const collection = document.getElementById('collection-notes').value;
+            
+            if (!problem.trim() && !field.trim() && !hypothesis.trim() && !population.trim() && !collection.trim()) {
+                alert('Please enter some notes before downloading.');
+                return;
+            }
+            
+            // Create a new window for printing
+            const printWindow = window.open('', '_blank');
+            printWindow.document.write(`
+                <html>
+                    <head>
+                        <title>Ethnography-Notes-Research-Steps.pdf</title>
+                        <style>
+                            body { font-family: Arial, sans-serif; line-height: 1.6; padding: 20px; }
+                            h1 { color: #003366; border-bottom: 2px solid #cc5500; padding-bottom: 10px; }
+                            .question { margin-top: 20px; font-weight: bold; }
+                            .answer { white-space: pre-wrap; margin-bottom: 25px; padding-left: 20px; }
+                        </style>
+                    </head>
+                    <body>
+                        <h1>Ethnography Notes - Research Steps</h1>
+                        <div class="question">1. Problem Definition: What specific research problem about this community might an ethnographer investigate?</div>
+                        <div class="answer">${problem}</div>
+                        <div class="question">2. Field Selection: How would you narrow down the research focus within this community?</div>
+                        <div class="answer">${field}</div>
+                        <div class="question">3. Hypothesis Formulation: What initial inductive hypotheses might emerge about this community's social dynamics?</div>
+                        <div class="answer">${hypothesis}</div>
+                        <div class="question">4. Population and Sampling: Who would be your target population and how would you select participants?</div>
+                        <div class="answer">${population}</div>
+                        <div class="question">5. Data Collection: What specific ethnographic methods would you use to gather cultural data in this context?</div>
+                        <div class="answer">${collection}</div>
+                    </body>
+                </html>
+            `);
+            
+            printWindow.document.close();
+            printWindow.print();
+        }
+        
+        // Generic function to download notes as PDF
         function downloadNotes(textareaId, filename) {
             const notesText = document.getElementById(textareaId).value;
             
@@ -373,4 +579,3 @@
     </script>
 </body>
 </html>
-
